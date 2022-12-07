@@ -1,0 +1,5 @@
+﻿  main.cpp
+C:\C++Projects\MyCPP_05\MyCPP_05\main.cpp(8,1): warning C4326: return type of 'main' should be 'int' instead of 'void'
+C:\C++Projects\MyCPP_05\MyCPP_05\main.cpp(42,9): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\C++Projects\MyCPP_05\MyCPP_05\main.cpp(43,9): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+  MyCPP_05.vcxproj -> C:\C++Projects\MyCPP_05\x64\Debug\MyCPP_05.exe
