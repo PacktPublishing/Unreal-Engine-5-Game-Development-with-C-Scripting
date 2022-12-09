@@ -1,5 +1,4 @@
 \Chapter 01
-	MyShooter
 \Chapter 02
 	MyCPP_01
 \Chapter 03
