@@ -1,3 +1,0 @@
-﻿  main.cpp
-C:\C++Projects\MyCPP_02\MyCPP_02\main.cpp(9,1): warning C4326: return type of 'main' should be 'int' instead of 'void'
-  MyCPP_02.vcxproj -> C:\C++Projects\MyCPP_02\x64\Debug\MyCPP_02.exe
