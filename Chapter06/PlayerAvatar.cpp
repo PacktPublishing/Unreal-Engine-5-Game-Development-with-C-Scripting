@@ -49,9 +49,8 @@ void APlayerAvatar::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 	
-	auto mesh = GetMesh()->GetAnimInstance();
-	auto playerAvatarAnimInst = Cast<UPlayerAvatarAnimInstance>(mesh);
-	playerAvatarAnimInst->Speed = GetCharacterMovement()->Velocity.Size2D();
+	auto animInst = Cast<UPlayerAvatarAnimInstance>(GetMesh()->GetAnimInstance());
+	animInst->Speed = GetCharacterMovement()->Velocity.Size2D();
 }
 
 // Called to bind functionality to input
