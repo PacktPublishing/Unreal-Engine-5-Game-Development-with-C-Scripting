@@ -50,7 +50,7 @@ void APlayerAvatar::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 	
-	auto animInst = Cast<UPlayerAvatarAnimInstance>(GetMesh()->GetAnimInstance());
+	UPlayerAvatarAnimInstance* animInst = Cast<UPlayerAvatarAnimInstance>(GetMesh()->GetAnimInstance());
 	animInst->Speed = GetCharacterMovement()->Velocity.Size2D();
 
 	if (_AttackCountingDown == AttackInterval)
@@ -105,4 +105,6 @@ void APlayerAvatar::DieProcess()
 	PrimaryActorTick.bCanEverTick = false;
 	K2_DestroyActor();
 	GEngine->ForceGarbageCollection(true);
+	
+	//Destroy(); 	You can also use this line instead of the above three lines.
 }
