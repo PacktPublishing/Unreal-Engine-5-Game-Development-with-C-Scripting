@@ -42,44 +42,37 @@ void AWeapon::OnWeaponBeginOverlap(AActor* OverlappedActor, AActor* OtherActor)
 
 	auto character = Cast<ACharacter>(OtherActor);
 
-	if (character != nullptr)
+	if (character == nullptr)
 	{
-		if (Holder == nullptr)
-		{
-			auto playerAvatar = Cast<APlayerAvatar>(character);
+		return;
+	}
+	
+	if (Holder == nullptr)
+	{
+		auto playerAvatar = Cast<APlayerAvatar>(character);
 
-			if (playerAvatar != nullptr)
+		if (playerAvatar != nullptr)
+		{
+			Holder = character;
+
+			TArray<AActor*> attachedActors;
+			OtherActor->GetAttachedActors(attachedActors, true);
+			for (int i = 0; i < attachedActors.Num(); ++i)
 			{
-				Holder = character;
-
-				TArray<AActor*> attachedActors;
-				OtherActor->GetAttachedActors(attachedActors, true);
-				for (int i = 0; i < attachedActors.Num(); ++i)
-				{
-					attachedActors[i]->DetachFromActor(FDetachmentTransformRules::KeepWorldTransform);
-					attachedActors[i]->SetActorRotation(FQuat::Identity);
-					AWeapon* weapon = Cast<AWeapon>(attachedActors[i]);
-					weapon->Holder = nullptr;
-				}
-				
-				AttachToComponent(Holder->GetMesh(),
-					FAttachmentTransformRules::SnapToTargetIncludingScale, FName("hand_rSocket"));
+				attachedActors[i]->DetachFromActor(FDetachmentTransformRules::KeepWorldTransform);
+				attachedActors[i]->SetActorRotation(FQuat::Identity);
+				AWeapon* weapon = Cast<AWeapon>(attachedActors[i]);
+				weapon->Holder = nullptr;
 			}
-		}
-		else if(IsWithinAttackRange(0.0f, OtherActor))
-		{
-			//if within attack range
-			//Deal damage to the target (PlayerAvatar or enemy)
+	
+			AttachToComponent(Holder->GetMesh(),
+				FAttachmentTransformRules::SnapToTargetIncludingScale, FName("hand_rSocket"));
 		}
 	}
-	else
+	else if(IsWithinAttackRange(0.0f, OtherActor))
 	{
-		auto tower = Cast<ADefenseTower>(OtherActor);
-		if (tower != nullptr && Owner != nullptr && tower->CanBeDamaged() && IsWithinAttackRange(0.0f, tower))
-		{
-			//tower->Hit(Strength);
-			//Deal damage to the tower
-		}
+		//if within attack range
+		//Deal damage to the target (PlayerAvatar or enemy)
 	}
 }
 

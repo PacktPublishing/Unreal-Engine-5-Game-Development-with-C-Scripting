@@ -81,4 +81,7 @@ protected:
 		AActor* OtherActor,
 		UPrimitiveComponent* OtherComponent,
 		int32 OtherBodyIndex);
+
+	UFUNCTION(BlueprintCallable)
+		void OnMeshBeginOverlap(AActor* OtherActor);
 };

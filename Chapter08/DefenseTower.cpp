@@ -109,4 +109,20 @@ void ADefenseTower::OnEndOverlap(UPrimitiveComponent* OverlappedComponent,
 	}
 }
 
+void ADefenseTower::OnMeshBeginOverlap(AActor* OtherActor)
+{
+	AWeapon* weapon = Cast<AWeapon>(OtherActor);
+	if (weapon == nullptr || weapon->Holder == nullptr)
+	{
+		return;
+	}
 
+	APangaeaCharacter* character = weapon->Holder;
+	if (character->IsA(APlayerAvatar::StaticClass()) &&
+		character->IsAttacking() &&
+		weapon->IsWithinAttackRange(character->AttackRange, this) &&
+		CanBeDamaged())
+	{
+		Hit(weapon->Holder->Strength);
+	}
+}
