@@ -1,7 +1,7 @@
 # Unreal Engine 5 Game Development with C++ Scripting	
 Unreal Engine 5 Game Development with C++ Scripting, Published by Packt
 
-<a href="https://www.packtpub.com/product/unreal-engine-5-game-development-with-c++-scripting/9781804613931"><img src="https://static.packt-cdn.com/products/9781804613931/cover/smaller" alt="Unreal Engine 5 Game Development with C++ Scripting" height="256px" align="right"></a>
+<a href="https://www.packtpub.com/product/unreal-engine-5-game-development-with-c-scripting/9781804613931"><img src="https://static.packt-cdn.com/products/9781804613931/cover/smaller" alt="Unreal Engine 5 Game Development with C++ Scripting" height="256px" align="right"></a>
 
 This is the code repository for [Unreal Engine 5 Game Development with C++ Scripting](https://www.packtpub.com/product/unreal-engine-5-game-development-with-c++-scripting/9781804613931), published by Packt.
 
