@@ -29,7 +29,7 @@ If you feel this book is for you, get your [copy](https://www.amazon.in/Unreal-E
 alt="https://www.packtpub.com/" border="5" /></a>
 
 ## Instructions and Navigations
-All of the files is organized into folders. For example, chapter01.
+All of the files is organized into folders. For example, Chapter02
 
 
 **Following is what you need for this book:**
