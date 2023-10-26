@@ -7,7 +7,7 @@ CalculatorEx::CalculatorEx()
 
 int CalculatorEx::Subtract(int a, int b)
 {
-	return a + b;
+	return a - b;
 }
 
 float CalculatorEx::Subtract(float a, float b)

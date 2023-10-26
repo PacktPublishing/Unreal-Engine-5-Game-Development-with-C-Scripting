@@ -20,7 +20,7 @@ void main()
 
 		cout << "Input the second value (0 to exit): ";
 		cin >> input2;
-		if (input1 == 0)	//exit if the user enters 0
+		if (input2 == 0)	//exit if the user enters 0
 		{
 			break;
 		}
