@@ -49,6 +49,10 @@ With the following software and hardware list you can run all code files present
 
 * Unreal Engine 5 Character Creation, Animation, and Cinematics  [[Packt]](https://www.packtpub.com/product/unreal-engine-5-character-creation-animation-and-cinematics/9781801812443) [[Amazon]](https://www.amazon.in/Unreal-Character-Creation-Animation-Cinematics/dp/1801812446)
 
+### Note
+* Page 203, There's a missing step in **Creating the BP_Enemy blueprint**,
+    _8. In the BP_Enemy blueprint, add an OnSeePawn event and use it to trigger the Chase() function._
+
 ## Get to Know the Author
 **Zhenyu George** Li is a passionate video game developer with 20+ years of experience. He has contributed significantly to many games and serves as a senior development consultant at Unity. His early immersion in technologies like C/C++, DirectX, OpenGL, and Windows GUI laid the foundation for his success. Notable titles in his portfolio include Magic Arena, Halo Infinity, Stela, Dead Rising 2, and The Bigs 2. He has gained extensive knowledge in programming, graphics, animation, gameplay, AI, multiplayer, and UI using Unreal and Unity engines. Additionally, he has taught UE at Vancouver Film School and has college teaching experience at College of Interactive Arts and Hefei Union University.
   
