@@ -22,7 +22,7 @@ public:
 		float Strength = 5;			//the character's attack strength
 
 	UPROPERTY(EditAnywhere, Category = "Enemy Params")
-		float Armer = 1;				//the character's defense armer
+		float Armor = 1;				//the character's defense armor
 
 	UPROPERTY(EditAnywhere, Category = "Enemy Params")
 		float AttackRange = 200.0f;		//the character's attack range
